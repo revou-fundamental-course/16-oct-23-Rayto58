@@ -5,38 +5,101 @@
         <meta name="Viewport" content="width=device0width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>
+    <body class="body">
+        <script src="./js/script.js"></script>
         <header class="header">
             <div class="nav-logo">
                 <img src="./assets/logo owl-01.png" alt="company-logo">
             </div>
             <nav class="nav">
                 <a class="nav-item">Home</a>
-                <a class="nav-item">Our Profile</a>
+                <a href="mypage.html" class="nav-item">Our Profile</a>
                 <a class="nav-item">Portofolio</a>
                 <a class="nav-item">Message Us</a>
             </nav>
         </header>
+        
         <section class="banner">
-            <div class="circle"></div>
+            <div class="greetings">
+                <h1 id="heading">Hi Raymond</h1>
+                
+            </div>
         </section>
         <section class="headquarters">
-            <div class="circle"></div>
+            <h1>Our Headquarters</h1>
+            <div class="hq-items">
+                <div class="circle">
+                    <img src="./assets/building1.jpg" alt="building-1">
+                    <p class="circle-text">Sydney</p>
+                </div>
+                <div class="circle">
+                    <img src="./assets/building2.jpg" alt="building-2">
+                    <p class="circle-text">Tokyo</p>
+                </div>
+                <div class="circle">
+                    <img src="./assets/building3.jpg" alt="building-3">
+                    <p class="circle-text">Dubai</p>
+                </div>
+            </div>
+            
         </section>
         <section class="form">
             <div class="form-left">
                 <form>
                     <table>
-                        <td>Nama</td>
-                        <td>:</td>
-                        <input id="nama" name="nama" type="text" placeholder="nama">
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>
+                                <input id="nama" name="nama" type="text" placeholder="nama" class="txt">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input id="laki-laki" name="kelamin" type="radio" value="Laki-laki">Laki-laki
+                                <input id="perempuan" name="kelamin" type="radio" value="Perempuan">Perempuan
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td>:</td>
+                            <td>
+                                <input type="date" id="birthday" name="birthday" class="txtdate">
+                            </td>
+                        </tr>
+                        <tr >
+                            <td >Pesan</td>
+                            <td >:</td>
+                            
+                            <td class="kiri">
+                                <input type="textarea" id="pesan" name="pesan" class="txtarea">
+                            </td>
+                           
+                        </tr>    
+                    </table>
+                    <input type="button" id="send" value="Send" onclick="test()">
+                </form>
+            </div>
+            <div class="form-right">
+                <form>
+                    <table class="messageAnswer">
+                        
+                        <td>
+                            <p id="namaHasil"></p>
+                            <p id="tanggalHasil"></p>
+                            <p id="jenisKelamin"></p>
+                            <p id="pesanPara"></p>
+                        </td>
                     </table>
                 </form>
             </div>
-            <div class="form-right"></div>
         </section>
         <footer class="footer">
-            
+            <center>
+                <p class="footer-text">made by Raymond</p>
+            </center>
         </footer>
         <script src="./js/script.js"></script>
     </body>
